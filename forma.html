@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./css/styles-form.css">
 </head>
 <body>
+
+    <a href="./index.html">На главную страницу урока</a>
+
     <form class="form js-speaker-form" autocomplete="on">
         <div class="form-fild">
             <label for="name">Имя</label>
@@ -86,19 +89,5 @@
 
 
 </body>
-<script>
-
-    (() => {
-        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-                console.log(`${name}: ${value}`),
-            );
-
-            e.currentTarget.reset();
-        });
-    })();
-
-</script>
+<script src="./js/consol-see.js"></script>
 </html>
