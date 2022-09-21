@@ -1,0 +1,67 @@
+.checkbox {
+  /* Вендерные префексы для сво-ва "appearance: none" */
+  /* -webkit-appearance: none; */
+  /* -moz-appearance: none; */
+  /* appearance: none; */
+
+  /* Выводим из потока документа станд. чекбокс */
+  /* position: absolute; */
+
+  /* visually-hidden */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.field {
+    position: relative;
+  outline: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  display: inline-block;
+ 
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+
+.icon-svg {
+    visibility: hidden;
+    position: absolute;    
+}
+
+.checkbox:checked ~ .icon-svg {
+    visibility: visible;
+}
+
+.checkbox:checked ~ .icon {
+  background-color: #2196f3;
+  background-image: url(../images/icons.svg#icon-check);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: #2196f3;
+}
+
+.label {
+    
+  transition: transform 250ms linear;
+}
+
+.checkbox:checked ~ .label {
+  transform: translate(20px);
+}
